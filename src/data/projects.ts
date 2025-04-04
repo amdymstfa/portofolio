@@ -9,6 +9,7 @@ export type Technology =
   | "Vue"
   | "Next.js"
   | "Node.js"
+  | "Chart.js"
   | "Express"
   | "PHP"
   | "Laravel"
@@ -21,6 +22,9 @@ export type Technology =
   | "C"
   | "Golang"
   | "Alpine.js"
+  | "Blade"
+  | "Swagger"
+  | "PHPUnit"
 
 export type ProjectCategory = "Frontend" | "Backend" | "Fullstack" | "Mobile" | "Design"
 
@@ -152,7 +156,115 @@ export const projects: Project[] = [
     "codeUrl": "https://github.com/amdymstfa/KaraCompete.git",
     "category": "Fullstack",
     "date": "2025"
+  },
+  {
+    "id": "savesmart",
+    "title": "SaveSmart - Gestion Financière",
+    "description": "Application web permettant de gérer les finances personnelles en famille, avec suivi des revenus, dépenses, objectifs d'épargne et visualisations graphiques.",
+    "imageUrl": "/images/smartsave.webp",
+    "technologies": ["Laravel", "PHP", "PostgreSQL", "Tailwind", "Chart.js"],
+    "features": [
+      {
+        "title": "Gestion des utilisateurs",
+        "description": "Inscription et authentification sécurisée, avec possibilité d'ajouter plusieurs utilisateurs sous un même compte familial."
+      },
+      {
+        "title": "Suivi des finances",
+        "description": "Saisie et suivi des revenus, dépenses et objectifs financiers via des formulaires CRUD intuitifs."
+      },
+      {
+        "title": "Visualisation graphique",
+        "description": "Tableaux et diagrammes dynamiques pour illustrer la répartition du budget."
+      },
+      {
+        "title": "Catégories personnalisables",
+        "description": "Ajout et gestion de catégories telles que Alimentation, Logement, Divertissement, Épargne."
+      },
+      {
+        "title": "Objectifs d'épargne",
+        "description": "Définition d'objectifs d'épargne avec affichage de la progression en fonction des montants économisés."
+      },
+      {
+        "title": "Optimisation budgétaire",
+        "description": "Algorithme de gestion du budget basé sur des règles logiques, incluant la méthode 50/30/20."
+      },
+      {
+        "title": "Export des données",
+        "description": "Possibilité d'exporter les données financières sous format PDF ou CSV."
+      }
+    ],
+    "demoUrl": "#",
+    "codeUrl": "https://github.com/amdymstfa/savesmart",
+    "category": "Fullstack",
+    "date": "2025"
+  },
+
+  {
+    "id": "customer-requests-api",
+    "title": "API de gestion des requêtes clients",
+    "description": "API avancée développée avec Laravel pour centraliser et gérer les requêtes clients des entreprises, avec documentation Swagger et gestion des accès via Laravel Sanctum.",
+    "imageUrl": "/images/customer.webp",
+    "technologies": ["Laravel", "PHP", "PostgreSQL", "Swagger", "PHPUnit", "JavaScript"],
+    "features": [
+      {
+        "title": "Documentation API avec Swagger",
+        "description": "API entièrement documentée avec Swagger pour faciliter son intégration et son utilisation."
+      },
+      {
+        "title": "Tests unitaires et fonctionnels",
+        "description": "Couverture de code avec PHPUnit pour garantir la stabilité et la robustesse de l'API."
+      },
+      {
+        "title": "Service Layer Design Pattern",
+        "description": "Organisation du code en couches pour améliorer la maintenabilité et la scalabilité de l'API."
+      },
+      {
+        "title": "Gestion avancée des requêtes",
+        "description": "Pagination, filtres et tri des requêtes clients pour une récupération efficace des données."
+      },
+      {
+        "title": "Authentification et autorisation sécurisées",
+        "description": "Utilisation de Laravel Sanctum pour gérer les accès et permissions des utilisateurs."
+      },
+      {
+        "title": "Consommation de l’API",
+        "description": "L’API peut être consommée avec n'importe quel framework JavaScript moderne."
+      }
+    ],
+    "demoUrl": "#",
+    "codeUrl": "https://github.com/amdymstfa/customer-requests-api",
+    "category": "Backend",
+    "date": "2025"
+  },
+
+  {
+    "id": "library-management-system",
+    "title": "Système de gestion de bibliothèque",
+    "description": "Application web développée avec Laravel pour digitaliser la gestion des ressources de la Bibliothèque Municipale de Saint-Marc.",
+    "imageUrl": "/images/biblio.webp",
+    "technologies": ["Laravel", "PHP", "PostgreSQL", "Blade", "Bootstrap"],
+    "features": [
+      {
+        "title": "Authentification des utilisateurs",
+        "description": "Système d'inscription, connexion et déconnexion sécurisé avec affichage des profils."
+      },
+      {
+        "title": "Gestion des livres",
+        "description": "Affichage des livres disponibles, ajout, modification et suppression de livres."
+      },
+      {
+        "title": "Gestion des emprunts",
+        "description": "Enregistrement des emprunts et des retours de livres avec suivi des disponibilités."
+      }
+    ],
+    "demoUrl": "#",
+    "codeUrl": "https://github.com/amdymstfa/library-management",
+    "category": "Backend",
+    "date": "2025"
   }
+  
+  
+  
   
   
 ]
