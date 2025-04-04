@@ -479,11 +479,11 @@ export default function Home() {
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
           <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Moustapha Ndiaye. Tous droits réservés.
+            &copy; {new Date().getFullYear()} Moustapha Ndiaye. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link
-              href="https://github.com/"
+              href="https://github.com/amdymstfa"
               className="text-muted-foreground hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"
@@ -492,7 +492,7 @@ export default function Home() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/"
+              href="https://linkedin.com/in/moustaphndiaye"
               className="text-muted-foreground hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"
