@@ -1,11 +1,12 @@
 import Link from "next/link"
+import Image from "next/image"
+import { ThemeToggle } from "@/components/theme-toggle"
+
 import {
   ArrowRight,
   Github,
   Linkedin,
   Mail,
-  Phone,
-  MapPin,
   Code,
   Database,
   Figma,
@@ -42,11 +43,18 @@ export default function Home() {
               Contact
             </Link>
           </nav>
-          <Button variant="outline" size="sm" asChild>
-            <a href="/cv-moustapha-ndiaye.pdf" download>
-              Télécharger CV
-            </a>
-          </Button>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://drive.google.com/file/d/1e_l3wllQlZywQl1UwU3Zjw3WcxR4SNLG/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
+            </Button>
+          </div>
         </div>
       </header>
       <main className="flex-1">
@@ -71,22 +79,25 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 flex justify-center">
-              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary">
-                <img
-                  src="/placeholder.svg?height=256&width=256&text=MN"
+            <div className="flex-1 flex justify-center">
+              <div className="relative w-64 h-64">
+                <Image
+                  src="/images/mstfa.jpg"
                   alt="Moustapha Ndiaye"
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover rounded-full"
                 />
               </div>
+            </div>
             </div>
           </div>
         </section>
 
         <section id="about" className="container py-24 sm:py-32 border-t">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <img
-                src="/placeholder.svg?height=400&width=400&text=Moustapha+Ndiaye"
+          <div className="flex-1 flex justify-center">
+              <Image
+                src="/images/mstfa2.jpg"
                 alt="Moustapha Ndiaye"
                 className="rounded-lg shadow-lg"
                 width={400}
@@ -319,28 +330,27 @@ export default function Home() {
 
         <section id="contact" className="container py-24 sm:py-32 border-t">
           <div className="mx-auto max-w-md text-center">
-            <h2 className="text-3xl font-bold mb-4">Me Contacter</h2>
+            <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
             <p className="text-muted-foreground mb-8">
-              Vous avez un projet en tête ou vous souhaitez simplement discuter ? N&apos;hésitez pas à me contacter !
-            </p>
+            Vous avez un projet en tête ou vous souhaitez simplement discuter ? N&apos;hésitez pas à me contacter !</p>
             <div className="space-y-4 mb-8 text-left">
               <Card>
-                <CardContent className="p-4 flex items-center gap-4">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <p>+212 6 84 63 49 21</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-4 flex items-center gap-4">
+                <div className="p-4 flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary" />
                   <p>Mstfa.ndiaye23@gmail.com</p>
-                </CardContent>
+                </div>
               </Card>
               <Card>
-                <CardContent className="p-4 flex items-center gap-4">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <p>Safi, Maroc</p>
-                </CardContent>
+                <div className="p-4 flex items-center gap-4">
+                  <Github className="h-5 w-5 text-primary" />
+                  <p>github.com/amdymstfa</p>
+                </div>
+              </Card>
+              <Card>
+                <div className="p-4 flex items-center gap-4">
+                  <Linkedin className="h-5 w-5 text-primary" />
+                  <p>linkedin.com/in/moustaphndiaye</p>
+                </div>
               </Card>
             </div>
             <div className="flex justify-center gap-4 mb-8">
@@ -351,13 +361,13 @@ export default function Home() {
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/amdymstfa" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.com/in/moustaphndiaye" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
@@ -372,11 +382,11 @@ export default function Home() {
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
           <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Moustapha Ndiaye. Tous droits réservés.
+            &copy; {new Date().getFullYear()} Moustapha Ndiaye. Tous droits 
           </p>
           <div className="flex gap-4">
             <Link
-              href="https://github.com/"
+              href="https://github.com/amdymstfa"
               className="text-muted-foreground hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"
@@ -385,7 +395,7 @@ export default function Home() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/"
+              href="https://linkedin.com/in/moustaphndiaye"
               className="text-muted-foreground hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"

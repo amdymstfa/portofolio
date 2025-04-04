@@ -20,6 +20,7 @@ export type Technology =
   | "SASS"
   | "C"
   | "Golang"
+  | "Alpine.js"
 
 export type ProjectCategory = "Frontend" | "Backend" | "Fullstack" | "Mobile" | "Design"
 
@@ -48,8 +49,8 @@ export const projects: Project[] = [
     title: "Youdemy",
     description:
       "Plateforme d'apprentissage en ligne interactive développée avec HTML, CSS, Tailwind CSS, JavaScript, PHP et MySQL.",
-    imageUrl: "/placeholder.svg?height=200&width=400&text=Youdemy",
-    technologies: ["HTML", "CSS", "Tailwind", "JavaScript", "PHP", "MySQL"],
+    imageUrl: "/images/youdemy.png",
+    technologies: ["HTML", "CSS", "Tailwind", "JavaScript", "PHP", "MySQL",],
     features: [
       {
         title: "Interface utilisateur intuitive",
@@ -73,43 +74,87 @@ export const projects: Project[] = [
       },
     ],
     demoUrl: "#",
-    codeUrl: "#",
+    codeUrl: "https://github.com/amdymstfa/Moustapha_Ndiaye_Youdemy.git",
     category: "Fullstack",
     date: "2023",
   },
+
   {
-    id: "eternia",
-    title: "Eternia",
-    description: "Site e-commerce développé en équipe avec HTML, CSS, Tailwind CSS et JavaScript.",
-    imageUrl: "/placeholder.svg?height=200&width=400&text=Eternia",
-    technologies: ["HTML", "CSS", "Tailwind", "JavaScript"],
-    features: [
+    "id": "portfolio-nextjs",
+    "title": "Moustapha Ndiaye",
+    "description": "Portfolio professionnel moderne développé avec Next.js, TypeScript et Tailwind CSS, avec système de filtrage de projets et modals interactifs.",
+    "imageUrl": "/images/mstfaP.png",
+    "technologies": ["Next.js", "TypeScript", "React", "Tailwind", "JavaScript"],
+    "features": [
       {
-        title: "Interface utilisateur moderne",
-        description: "Design responsive avec HTML, CSS, Tailwind CSS et JavaScript.",
+        "title": "Architecture modulaire",
+        "description": "Structure de code organisée et évolutive permettant d'ajouter facilement de nouveaux projets."
       },
       {
-        title: "Panier d'achat et devis PDF",
-        description: "Système de panier interactif avec génération de devis en PDF.",
+        "title": "Système de filtrage avancé",
+        "description": "Filtrage dynamique des projets par technologies et catégories pour une meilleure expérience utilisateur."
       },
       {
-        title: "Galerie photo et carrousel",
-        description: "Présentation visuelle des produits avec navigation intuitive.",
+        "title": "Modals interactifs",
+        "description": "Affichage détaillé des projets dans des fenêtres modales pour une présentation claire et concise."
       },
       {
-        title: "Tableau de bord KPI",
-        description: "Visualisation des indicateurs clés de performance.",
+        "title": "Design responsive",
+        "description": "Interface adaptative optimisée pour tous les appareils, du mobile au desktop."
       },
       {
-        title: "Gestion des produits",
-        description: "Système de filtrage, tri et pagination des produits.",
-      },
+        "title": "Composants réutilisables",
+        "description": "Utilisation de composants UI modulaires avec shadcn/ui pour une cohérence visuelle."
+      }
     ],
-    demoUrl: "#",
-    codeUrl: "#",
-    category: "Frontend",
-    date: "2023",
+    "demoUrl": "#",
+    "codeUrl": "https://github.com/amdymstfa/portofolio.git",
+    "category": "Frontend",
+    "date": "2024"
   },
+  {
+    "id": "karacompete",
+    "title": "KaraCompete",
+    "description": "Application web pour organiser, suivre et analyser les compétitions de karaté avec une gestion avancée des participants, combats, arbitres et résultats.",
+    "imageUrl": "/images/karateApp.png",
+    "technologies": ["Laravel", "Alpine.js", "PostgreSQL"],
+    "features": [
+      {
+        "title": "Gestion des participants",
+        "description": "Inscription complète des athlètes avec leurs informations personnelles, possibilité d'inscription autonome."
+      },
+      {
+        "title": "Gestion des catégories",
+        "description": "Création flexible de catégories selon âge, sexe, poids et grade, avec options personnalisées."
+      },
+      {
+        "title": "Organisation des combats",
+        "description": "Génération automatique de tableaux de compétition et attribution des arbitres avec suivi en temps réel."
+      },
+      {
+        "title": "Planification des horaires",
+        "description": "Planification précise des combats avec rappels automatiques et affichage des retards."
+      },
+      {
+        "title": "Affichage des résultats",
+        "description": "Diffusion en direct des résultats et génération automatique de certificats pour les gagnants."
+      },
+      {
+        "title": "Statistiques et rapports",
+        "description": "Analyse des performances, statistiques détaillées et rapports exportables pour les organisateurs."
+      },
+      {
+        "title": "Système de notifications",
+        "description": "Envoi de notifications push et emails pour les rappels de matchs, changements de planning ou annonces importantes."
+      }
+    ],
+    "demoUrl": "#",
+    "codeUrl": "https://github.com/amdymstfa/KaraCompete.git",
+    "category": "Fullstack",
+    "date": "2025"
+  }
+  
+  
 ]
 
 // Fonction pour obtenir toutes les technologies uniques
