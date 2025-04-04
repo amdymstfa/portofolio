@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ThemeToggle } from "@/components/theme-toggle"
+import Image from "next/image"
 
 import {
   ArrowRight,
@@ -79,11 +80,12 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 flex justify-center">
-              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary">
-                <img
-                  src="/placeholder.svg?height=256&width=256&text=MN"
+              <div className="relative w-64 h-64">
+                <Image
+                  src="/images/mstfa.jpg"
                   alt="Moustapha Ndiaye"
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover rounded-full"
                 />
               </div>
             </div>
@@ -92,9 +94,9 @@ export default function Home() {
 
         <section id="about" className="container py-24 sm:py-32 border-t">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <img
-                src="/placeholder.svg?height=400&width=400&text=Moustapha+Ndiaye"
+          <div className="flex-1 flex justify-center">
+              <Image
+                src="/images/mstfa2.jpg"
                 alt="Moustapha Ndiaye"
                 className="rounded-lg shadow-lg"
                 width={400}
