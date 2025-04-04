@@ -1,7 +1,4 @@
 import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
-import Image from "next/image"
-
 import {
   ArrowRight,
   Github,
@@ -20,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import ProjectsSection from "@/components/projects-section"
 
 export default function Home() {
   return (
@@ -44,18 +42,11 @@ export default function Home() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://drive.google.com/file/d/1e_l3wllQlZywQl1UwU3Zjw3WcxR4SNLG/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download CV
-              </a>
-            </Button>
-          </div>
+          <Button variant="outline" size="sm" asChild>
+            <a href="/cv-moustapha-ndiaye.pdf" download>
+              Télécharger CV
+            </a>
+          </Button>
         </div>
       </header>
       <main className="flex-1">
@@ -80,12 +71,11 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 flex justify-center">
-              <div className="relative w-64 h-64">
-                <Image
-                  src="/images/mstfa.jpg"
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary">
+                <img
+                  src="/placeholder.svg?height=256&width=256&text=MN"
                   alt="Moustapha Ndiaye"
-                  fill
-                  className="object-cover rounded-full"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
@@ -94,9 +84,9 @@ export default function Home() {
 
         <section id="about" className="container py-24 sm:py-32 border-t">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="flex-1 flex justify-center">
-              <Image
-                src="/images/mstfa2.jpg"
+            <div>
+              <img
+                src="/placeholder.svg?height=400&width=400&text=Moustapha+Ndiaye"
                 alt="Moustapha Ndiaye"
                 className="rounded-lg shadow-lg"
                 width={400}
@@ -263,105 +253,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="container py-24 sm:py-32 border-t">
-          <h2 className="text-3xl font-bold mb-12 text-center">Mes Projets</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="overflow-hidden">
-              <div className="aspect-video relative">
-                <img
-                  src="/placeholder.svg?height=200&width=400&text=Youdemy"
-                  alt="Projet Youdemy"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-2">Youdemy</h3>
-                <p className="text-muted-foreground mb-4">
-                  Plateforme d&apos;apprentissage en ligne interactive développée avec HTML, CSS, Tailwind CSS,
-                  JavaScript, PHP et MySQL.
-                </p>
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Fonctionnalités clés:</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                    <li>Interface utilisateur intuitive avec HTML, CSS, Tailwind CSS et JavaScript</li>
-                    <li>Back Office en PHP et MySQL avec principes OOP</li>
-                    <li>Base de données relationnelle</li>
-                    <li>Système sécurisé d&apos;authentification</li>
-                    <li>Optimisation des performances</li>
-                  </ul>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge>HTML</Badge>
-                  <Badge>CSS</Badge>
-                  <Badge>Tailwind</Badge>
-                  <Badge>JavaScript</Badge>
-                  <Badge>PHP</Badge>
-                  <Badge>MySQL</Badge>
-                </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" asChild>
-                    <Link href="#">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Link>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <Link href="#">
-                      <ArrowRight className="mr-2 h-4 w-4" />
-                      Démo
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="aspect-video relative">
-                <img
-                  src="/placeholder.svg?height=200&width=400&text=Eternia"
-                  alt="Projet Eternia"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-2">Eternia</h3>
-                <p className="text-muted-foreground mb-4">
-                  Site e-commerce développé en équipe avec HTML, CSS, Tailwind CSS et JavaScript.
-                </p>
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Fonctionnalités clés:</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                    <li>Interface utilisateur avec HTML, CSS, Tailwind CSS et JavaScript</li>
-                    <li>Panier d&apos;achat et génération de devis PDF</li>
-                    <li>Galerie photo et carrousel des produits</li>
-                    <li>Tableau de bord pour les KPI</li>
-                    <li>Gestion des produits avec filtres, tri et pagination</li>
-                  </ul>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge>HTML</Badge>
-                  <Badge>CSS</Badge>
-                  <Badge>Tailwind</Badge>
-                  <Badge>JavaScript</Badge>
-                </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" asChild>
-                    <Link href="#">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Link>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <Link href="#">
-                      <ArrowRight className="mr-2 h-4 w-4" />
-                      Démo
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+        {/* Utilisation du composant ProjectsSection */}
+        <ProjectsSection />
 
         <section id="education" className="container py-24 sm:py-32 border-t bg-muted/40">
           <h2 className="text-3xl font-bold mb-12 text-center">Formation & Certifications</h2>
@@ -479,11 +372,11 @@ export default function Home() {
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
           <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Moustapha Ndiaye. All rights reserved.
+            &copy; {new Date().getFullYear()} Moustapha Ndiaye. Tous droits réservés.
           </p>
           <div className="flex gap-4">
             <Link
-              href="https://github.com/amdymstfa"
+              href="https://github.com/"
               className="text-muted-foreground hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"
@@ -492,7 +385,7 @@ export default function Home() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/moustaphndiaye"
+              href="https://linkedin.com/in/"
               className="text-muted-foreground hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"
