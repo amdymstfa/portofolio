@@ -194,7 +194,7 @@ export const projects: Project[] = [
       }
     ],
     "demoUrl": "#",
-    "codeUrl": "https://github.com/amdymstfa/savesmart",
+    "codeUrl": "https://github.com/amdymstfa/Moustapha-Ndiaye-SaveSmart.git",
     "category": "Fullstack",
     "date": "2025"
   },
@@ -232,7 +232,7 @@ export const projects: Project[] = [
       }
     ],
     "demoUrl": "#",
-    "codeUrl": "https://github.com/amdymstfa/customer-requests-api",
+    "codeUrl": "https://github.com/amdymstfa/Moustapha-Ndiaye-CustomerCareAPI.git",
     "category": "Backend",
     "date": "2025"
   },
@@ -258,7 +258,7 @@ export const projects: Project[] = [
       }
     ],
     "demoUrl": "#",
-    "codeUrl": "https://github.com/amdymstfa/library-management",
+    "codeUrl": "https://github.com/amdymstfa/Moustapha-Ndiaye-library-management.git",
     "category": "Backend",
     "date": "2025"
   }
